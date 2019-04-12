@@ -1,0 +1,14 @@
+server:
+  port: 8880
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/mfs?createDatabaseIfNotExist=true"
+    username: "postgres"
+    password: "postgres"
+    initialization-mode: always
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false

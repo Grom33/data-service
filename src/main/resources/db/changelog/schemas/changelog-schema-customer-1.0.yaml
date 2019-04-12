@@ -1,0 +1,23 @@
+databaseChangeLog:
+  # структура хранилища сервиса администраторов
+  #TODO после формирования требований к сервису эта структура булет перенесена туда
+  - changeSet:
+      id: customer-1-1
+      author: gromov.vitaly
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                  name: fullname
+                  type: VARCHAR
+                  remarks: Полное имя
+              - column:
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_customer
+                  name: id
+                  type: UUID
+            remarks: Клиент организации
+            tableName: customer
